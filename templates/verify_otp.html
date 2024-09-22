@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Verify OTP</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <form method="GET" action="/verify_otp">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" name="otp" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+    </div>
+{% endblock %}

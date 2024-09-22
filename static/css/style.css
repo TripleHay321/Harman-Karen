@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styling for buttons and links */
+a, button {
+    background-color: hwb(211 0% 0%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+a:hover, button:hover {
+    background-color: #0056b3;
+}
+
+.to_login {
+    color:  #fff;; /* Light blue for better visibility */
+    margin-top: 20px;
+}
+
+.to_login:hover {
+    color: #c9c9c9; /* Darker shade of blue for hover effect */
+}
+
+/* Remove text-decoration from all links */
+a {
+    text-decoration: none;
+}
+
+/* Home page styling */
+.gokada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.gokada img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.gokada h2 {
+    font-size: 24px;
+    color: #333;
+    margin-left: 20px;
+}
+
+.home_form a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: hwb(0 100% 0%);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.home_form a:hover {
+    background-color: hsl(211, 100%, 35%);
+}
+
+/* Form styling (register, login, OTP) */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #007bff;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Settings page */
+.profile img {
+    max-width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.settings {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.settings a {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: #e9ecef; /* Light gray for better visibility */
+    color: #495057; /* Dark gray for text */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.settings a:hover {
+    background-color: #dee2e6; /* Slightly darker gray for hover effect */
+}
+
+/* OTP page */
+.container form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form input[name="otp"] {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 5px;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+/* General styling for headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Home Page */
+.gokada h2 {
+    font-size: 32px;
+    color: #007bff; /* Primary color for headings */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Register and Login Forms */
+form.register h3, form.login h3 {
+    font-size: 28px;
+    color: #007bff; /* Primary color for headings */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Settings Page */
+.settings h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff; /* Underline with primary color */
+    padding-bottom: 10px;
+}
+
+/* Profile Section */
+.profile h3 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* OTP Page */
+.container form h3 {
+    font-size: 28px;
+    color: #007bff; /* Primary color for headings */
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.flash-messages {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+    z-index: 9999;
+}
+
+.flash {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #ff0000;
+    font-size: 16px;
+}
+
+

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Dashboard</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h4>Settings</h4>
+        <div class="profile">
+            <img src="\static\img\1338b690-0b97-49fa-858c-d654b375964d.png" alt="">
+        </div>
+        <div class="settings">
+            <h3>{{ name }}</h3>
+            <a href="" class="set">Personal Information</a><br>
+            <a href="" class="set">Change Pin</a><br>
+            <a href="" class="set">Support Team</a><br>
+            <a href="" class="set">Legal</a><br>
+            <a href="" class="set">My Referrals</a><br>
+            <a href="{{ url_for('logout') }}" class="set">Sign Out</a><br>
+        </div>
+    </div>
+{% endblock %}

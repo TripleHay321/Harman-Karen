@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Login</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <section class="login">
+            <h4>Login</h4>
+            {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+            <form action="/login" method="POST" class="login">
+                {{ form.hidden_tag() }}
+
+                <label for="email">Your Email</label><br>
+                {{ form.email }} <br>
+
+                <label for="password">Your password</label><br>
+                {{ form.password }} <br>
+                
+                {{ form.submit }} <br>
+            </form>
+        </section>
+        <a class="to_login" href="{{ url_for('register') }}">Don't have an account? Sign Up</a><br>
+        <a class="to_login" href="{{ url_for('register') }}">Forgot Password?</a>
+    </div>
+{% endblock %}

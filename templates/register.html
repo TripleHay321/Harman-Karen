@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Register</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2>Register</h2>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+   <form action="" method="POST" class="register">
+        {{ form.hidden_tag() }}
+        <label for="name">Your Name</label><br>
+        {{ form.name }} <br>
+
+        <label for="email">Your Email</label><br>
+        {{ form.email }} <br>
+
+        <label for="number">Your Phone Number</label><br>
+        {{ form.tel }} <br>
+
+        <label for="password">Your password</label><br>
+        {{ form.password }} <br>
+
+
+        {{ form.submit }}
+   </form>
+   <a class="to_login" href="{{ url_for('login') }}">Already have an account? Login</a>
+</div>
+{% endblock %}

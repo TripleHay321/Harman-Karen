@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="gokada">
+            {% with messages = get_flashed_messages(with_categories=True) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash {{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+            <div class="img">
+                <img src="static/img/Harman Kardon Onyx Studio 5 Bluetooth Wireless Speaker (Onyx5) (Blue).png" alt="logo">
+            </div>
+            <div class="comp">
+                <h2>HK Onyx</h2>
+            </div>
+        </div>
+    
+        <div class="home_form">
+            <a href="{{ url_for('login') }}" class="exist">Existing User</a><br>
+            <a href="{{ url_for('register') }}">New User</a>
+        </div>
+    </div>
+{% endblock %}
